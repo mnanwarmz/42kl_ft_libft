@@ -18,17 +18,3 @@ void *ft_memcpy(void *dest, const void *src, size_t len)
 	}
 	return dest;
 }
-
-int main()
-{
-	char a[] = "Hello";
-	char b[] = "Hello";
-	char *c;
-	char *d;
-
-	c = ft_memcpy(a, "Byee", 7);
-	d = memcpy(b, "Byee", 5);
-
-	printf("ft = %s, %p\n", a, c);
-	printf("ft = %s, %p", b, d);
-}
