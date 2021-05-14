@@ -1,18 +1,16 @@
 #include <stdlib.h>
+#include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *d;
-	const char *s;
-	size_t i;
+	char			*d;
+	const char		*s;
+	unsigned char	*tmp;
 
-	i = 0;
 	s = src;
 	d = dest;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return dest;
+	tmp = malloc(sizeof(char) * n);
+	ft_memcpy(tmp, s, n);
+	ft_memcpy(d, tmp, n);
+	return (dest);
 }

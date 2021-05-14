@@ -1,10 +1,10 @@
 #include <stdlib.h>
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t len)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t len)
 {
-	char *d;
-	const char *s;
-	size_t i;
+	char		*d;
+	const char	*s;
+	size_t		i;
 
 	i = 0;
 	s = src;
@@ -14,5 +14,5 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t len)
 		d[i] = s[i];
 		i++;
 	}
-	return &d[i];
+	return (&d[i]);
 }
