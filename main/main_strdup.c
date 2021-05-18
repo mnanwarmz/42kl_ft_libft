@@ -9,17 +9,15 @@ int	main(void)
 	char	*s2 = "World";
 	char	*res1 = strdup(s1);
 	char	*res2 = strdup(s2);
+	char	*res3 = ft_strdup(s1);
+	char	*res4 = ft_strdup(s2);
 
-	for (int i = 0; i < 6; i++)
-	{
-		printf("%c", res1[i]);
-	}
-	printf("\n");
-	for (int i = 0; i < 6; i++)
-	{
-		printf("%c", res2[i]);
-	}
-	printf("\n");
+		printf("%s\n", res1);
+		printf("%s\n", res3);
+		printf("%s\n", res2);
+		printf("%s\n", res4);
 	free(res1);
 	free(res2);
+	free(res3);
+	free(res4);
 }

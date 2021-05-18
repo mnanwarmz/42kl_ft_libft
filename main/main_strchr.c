@@ -6,9 +6,9 @@ int	main(void)
 {
 	char	*s1 = "Hello";
 
-	printf("%p\n", (void *)s1);
-	printf("%p\n", (void *)(strchr(s1, 'l')));
-	printf("%p\n", (void *)(ft_strchr(s1, 'l')));
-	printf("%p\n", (void *)(strchr(s1, '\0')));
-	printf("%p\n", (void *)(ft_strchr(s1, '\0')));
+	printf("%p\n",s1);
+	printf("%p\n",(strchr(s1, 'l')));
+	printf("%p\n",(ft_strchr(s1, 'l')));
+	printf("%p\n",(strchr(s1, '\0')));
+	printf("%p\n",(ft_strchr(s1, '\0')));
 }
