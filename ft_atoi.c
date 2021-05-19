@@ -14,7 +14,7 @@ int	get_negs(const char *c, int *counter)
 	i = 0;
 	result = 1;
 	while (is_space(c[i]))
-		i++
+		i++;
 	if (c[i] == '-' || c[i] == '+')
 	{
 		if (c[i] == '-')
