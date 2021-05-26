@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	char_exists(char ch,char const *set)
+int	char_exists(char ch, char const *set)
 {
 	int	i;
 
@@ -18,21 +18,24 @@ int	char_exists(char ch,char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
+	size_t	j;
 	char	*result;
 
-	i = 0;
-	while (s1[i])
+	i = -1;
+	while (s1[++i])
 	{
-		if (char_exists(s1[i++], set))
+		if (char_exists(s1[i], set))
 			continue ;
 	}
-	result = malloc(sizeof(char) * i + 1);
-	i = 0;
-	while (s1[i])
+	result = malloc((sizeof(char) * i) + 1);
+	i = -1;
+	j = 0;
+	while (s1[++i])
 	{
-		if (char_exists(s1[i++], set))
+		if (char_exists(s1[i], set))
 			continue ;
-		result[i] = s1[i];
+		result[j] = s1[i];
+		j++;
 	}
 	return (result);
 }
