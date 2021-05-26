@@ -9,7 +9,6 @@ int	main(void)
 
 	printf("%s\n", res);
 	printf("%s\n", res2);
-
 	free(res);
 	free(res2);
 }
