@@ -7,8 +7,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*dest;
 	int				result;
 
-	src = (unsigned char*)s2;
-	dest = (unsigned char*)s1;
+	src = (unsigned char *) s2;
+	dest = (unsigned char *) s1;
 	i = 0;
 	result = 0;
 	while (i < n)
