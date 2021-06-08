@@ -80,7 +80,7 @@ void	putstr(void *c)
 
 	str = (char *)c;
 	ft_putstr_fd(str, 1);
-	ft_putstr_fd(" ", 1);	
+	ft_putstr_fd(" ", 1);
 }
 
 void	*ft_neg(void *c)
