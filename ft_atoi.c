@@ -1,10 +1,4 @@
-int	is_space(char c)
-{
-	if (c == ' ' || c == '\t' || c == '\n'
-		|| c == '\v' || c == '\f' || c == '\r')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	get_negs(const char *c, int *counter)
 {
@@ -13,7 +7,7 @@ int	get_negs(const char *c, int *counter)
 
 	i = 0;
 	result = 1;
-	while (is_space(c[i]))
+	while (ft_isspace(c[i]))
 		i++;
 	if (c[i] == '-' || c[i] == '+')
 	{
