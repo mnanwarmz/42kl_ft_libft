@@ -1,4 +1,6 @@
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	return ((c < 58 && c > 47) || (c < 123 && c > 96) || (c > 64 && c < 91));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
