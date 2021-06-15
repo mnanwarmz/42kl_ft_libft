@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "libft.h"
 #include <stdlib.h>
 
@@ -18,24 +19,28 @@ char	*ft_strcpy(char *dst, const char *src)
 char	*ft_itoa(int n)
 {
 	char	*str;
+	int		i;
+	int		neg;
 
-	str = (char *)malloc(sizeof(char) * 2);
-	if (!str)
-		return (NULL);
+	neg = 0;
+	i = 0;
+	str = malloc(sizeof(char) * ft_intlen(n) + 1);
 	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
+	{
+		str = "-2147483648";
+		return (str);
+	}
 	if (n < 0)
 	{
-		str[0] = '-';
-		str[1] = '\0';
-		str = ft_strjoin(str, ft_itoa(-n));
+		neg = 1;
+		n *= -1;
 	}
-	else if (n >= 10)
-		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	else if (n < 10 && n >= 0)
+	while (n)
 	{
-		str[0] = n + '0';
-		str[1] = '\0';
+		str[i++] = (n % 10) + '0';
+		n /= 10;
 	}
-	return (str);
+	if (neg)
+		str[i] = '-';
+	return (ft_strrev(str));
 }

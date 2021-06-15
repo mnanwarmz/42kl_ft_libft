@@ -43,7 +43,11 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_intlen(unsigned long n);
+void	ft_swap(int *a, int *b);
+char	*ft_strrev(char *str);
+int		ft_pow(int nb, int power);
 
+void	ft_swapchar(char *a, char *b);
 typedef struct s_list
 {
 	void			*content;

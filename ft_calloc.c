@@ -9,6 +9,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!(new))
 		return (NULL);
 	else
-		ft_memset(new, 0, size * nmemb);
+		ft_bzero(new, nmemb * size);
 	return (new);
 }

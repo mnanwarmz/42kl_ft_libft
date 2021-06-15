@@ -1,4 +1,4 @@
 int	ft_isdigit(char c)
 {
-	return (c < 58 && c > 47);
+	return (c >= '0' && c <= '9');
 }
