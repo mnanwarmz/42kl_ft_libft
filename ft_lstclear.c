@@ -4,10 +4,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*item;
 
+	if (!lst || !del)
+		return ;
 	while (*lst != NULL && del != NULL)
 	{
-		item = (*lst);
-		ft_lstdelone(item, del);
 		item = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = item;
 	}
 }
