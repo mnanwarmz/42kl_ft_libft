@@ -23,7 +23,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				j++;
 			}
 		}
-		len--;
 		i++;
 	}
 	return (NULL);
