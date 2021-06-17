@@ -1,15 +1,15 @@
+#include <stddef.h>
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] != c)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (s[i] == '\0')
+			return (NULL);
 		i++;
 	}
-	if (!c && s[i] == '\0')
-		return ((char *)&s[i]);
-	return (0);
+	return ((char *)&s[i]);
 }

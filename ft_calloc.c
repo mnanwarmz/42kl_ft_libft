@@ -11,9 +11,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		size = 1;
 	}
 	new = (char *)malloc(sizeof(char) * size * nmemb);
-	if (!(new))
-		return (NULL);
-	else
+	if (new)
 		ft_bzero(new, nmemb * size);
+	else
+		return (NULL);
 	return (new);
 }

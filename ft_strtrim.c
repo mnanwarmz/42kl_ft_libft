@@ -21,12 +21,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	char	*result;
 
-	i = 0;
-	while (s1[i])
+	i = -1;
+	while (s1[++i])
 	{
 		if (char_exists(s1[i], set))
 			continue ;
-		i++;
 	}
 	result = malloc((sizeof(char) * i) + 1);
 	i = -1;
