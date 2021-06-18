@@ -60,8 +60,5 @@ bonus		:	$(OBJ) $(B_OBJ)
 				@ echo Generating Bonus $(NAME)..
 				@ $(AR) $(NAME) $(OBJ) $(B_OBJ)
 				@ $(RL) $(NAME)
-so 			:
-				$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-				gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 .PHONY		:	all clean fclean re
