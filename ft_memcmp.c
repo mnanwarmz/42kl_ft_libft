@@ -14,7 +14,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		while (i < n)
 		{
 			if (src[i] != dest[i])
-				return (src[i] - dest[i]);
+				return (dest[i] - src[i]);
 			i++;
 		}
 	}
