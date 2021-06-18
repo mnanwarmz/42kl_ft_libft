@@ -50,9 +50,6 @@ clean		:
 fclean		:	clean
 				@ echo Removing $(NAME)..
 				@ $(RM) $(NAME)
-ft_strjoin	:
-				$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-				gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 re			:	fclean all
 
