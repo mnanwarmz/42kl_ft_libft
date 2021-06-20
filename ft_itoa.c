@@ -19,27 +19,24 @@ char	*ft_strcpy(char *dst, const char *src)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		i;
-	int		neg;
 
-	neg = 0;
-	i = 0;
-	str = malloc(sizeof(char) * ft_intlen(n) + 1);
+	str = (char *)malloc(sizeof(char) * ft_intlen(n) + 1);
+	if (!(str))
+		return (NULL);
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strcpy(str, "-2147483648"));
 	if (n < 0)
 	{
-		neg = 1;
-		n *= -1;
+		str[0] = '-';
+		str[1] = '\0';
+		str = ft_strjoin(str, ft_itoa(-n));
 	}
-	while (n)
+	else if (n >= 10)
+		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
+	else if (n < 10 && n >= 0)
 	{
-		str[i++] = (n % 10) + '0';
-		n /= 10;
+		str[0] = n + '0';
+		str[1] = '\0';
 	}
-	if (neg)
-		str[i++] = '-';
-	ft_strrev(str);
-	str[i] = '\0';
 	return (str);
 }

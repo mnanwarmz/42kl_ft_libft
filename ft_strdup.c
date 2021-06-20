@@ -7,6 +7,8 @@ char	*ft_strdup(char *src)
 	int		i;
 
 	result = (char *)malloc(ft_strlen(src) * sizeof(char) + 1);
+	if (!result)
+		return (NULL);
 	i = 0;
 	while (src[i] != '\0')
 	{
