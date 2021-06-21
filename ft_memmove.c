@@ -10,7 +10,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = src;
 	d = dest;
 	tmp = malloc(sizeof(char) * n);
+	if (tmp == NULL)
+		return (NULL);
 	ft_memcpy(tmp, s, n);
 	ft_memcpy(d, tmp, n);
+	free(tmp);
 	return (dest);
 }

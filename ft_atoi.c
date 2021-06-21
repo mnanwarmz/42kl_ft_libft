@@ -23,9 +23,9 @@ int	get_negs(const char *c, int *counter)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	negs;
-	int	result;
+	int		i;
+	int		negs;
+	long	result;
 
 	i = 0;
 	negs = get_negs(str, &i);

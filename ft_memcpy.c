@@ -7,8 +7,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	size_t		i;
 
 	i = 0;
-	s = src;
-	d = dest;
+	s = (char *)src;
+	d = (char *)dest;
+	if (!src || !len)
+		return (NULL);
 	while (i < len)
 	{
 		d[i] = s[i];
