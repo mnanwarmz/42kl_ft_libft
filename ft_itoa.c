@@ -2,8 +2,6 @@
 #include "libft.h"
 #include <stdlib.h>
 
-
-
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -12,7 +10,7 @@ char	*ft_itoa(int n)
 	if (!(str))
 		return (NULL);
 	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
+		return ("-2147483648");
 	if (n < 0)
 	{
 		str[0] = '-';
