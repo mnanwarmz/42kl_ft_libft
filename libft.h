@@ -46,6 +46,7 @@ int		ft_intlen(unsigned long n);
 void	ft_swap(int *a, int *b);
 char	*ft_strrev(char *str);
 int		ft_pow(int nb, int power);
+char	*ft_strcpy(char *dst, const char *src);
 
 void	ft_swapchar(char *a, char *b);
 typedef struct s_list
