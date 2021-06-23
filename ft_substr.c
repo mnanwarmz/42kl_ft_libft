@@ -21,11 +21,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		if (!result)
 			return (NULL);
 		while (s[start] && j < len)
-		{
-			result[j++] = s[start];
-			start++;
-		}
+			result[j++] = s[start++];
 		result[j] = '\0';
+		return (result);
 	}
-	return (result);
+	return (0);
 }
