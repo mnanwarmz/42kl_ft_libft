@@ -11,7 +11,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		if (size > 0)
 		{
 			if (src_len < size - 1)
-				ft_memcpy(dest, src, src_len - 1);
+				ft_memcpy(dest, src, src_len + 1);
 			else
 			{
 				ft_memcpy(dest, src, src_len - 1);

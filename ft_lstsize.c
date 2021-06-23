@@ -7,10 +7,11 @@ int	ft_lstsize(t_list *lst)
 	i = 0;
 	if (lst)
 	{
+		i = 1;
 		while (lst->next != NULL)
 		{
-			i++;
 			lst = lst->next;
+			i++;
 		}
 	}
 	return (i);
