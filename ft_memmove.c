@@ -6,6 +6,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char			*d;
 	const char		*s;
 
+	if (dest == src || n == 0)
+		return (dest);
 	s = src;
 	d = dest;
 	if ((d > s) && ((d - s) < (int)n))
