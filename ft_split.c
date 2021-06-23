@@ -60,22 +60,21 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	i = 0;
 	k = 0;
-	result = (char **)malloc(sizeof(char *) * (ft_word_count(s, c)) + 1);
-	if (!result)
-		return (NULL);
-	while (s[i])
+	if (s)
 	{
-		while (s[i] == c)
-			i++;
-		j = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > j)
+		result = (char **)malloc(sizeof(char *) * (ft_word_count(s, c)) + 1);
+		while (s[i])
 		{
-			result[k] = ft_strndup(s + j, i - j);
-			k++;
+			while (s[i] == c)
+				i++;
+			j = i;
+			while (s[i] && s[i] != c)
+				i++;
+			if (i > j)
+				result[k++] = ft_strndup(s + j, i - j);
 		}
+		result[k] = NULL;
+		return (result);
 	}
-	result[k] = NULL;
-	return (result);
+	return (NULL);
 }
