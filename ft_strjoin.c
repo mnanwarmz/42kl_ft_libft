@@ -8,8 +8,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	j;
 	char	*result;
 
-	i = 0;
-	j = 0;
+	i = -1;
+	j = -1;
 	if (s1 || s2)
 	{
 		total = ft_strlen(s1) + ft_strlen(s2) + 1;
