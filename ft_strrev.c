@@ -10,9 +10,8 @@ char	*ft_strrev(char *str)
 	while (j > i)
 	{
 		j--;
-		ft_swapchar(&str[i],&str[j]);
+		ft_swapchar(&str[i], &str[j]);
 		i++;
 	}
 	return (str);
 }
- 

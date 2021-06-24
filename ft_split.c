@@ -71,10 +71,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-		{
-			result[k] = ft_strndup(s + j, i - j);
-			k++;
-		}
+			result[k++] = ft_strndup(s + j, i - j);
 	}
 	result[k] = NULL;
 	return (result);
