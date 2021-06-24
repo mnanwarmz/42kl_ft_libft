@@ -14,7 +14,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 				ft_memcpy(dest, src, src_len + 1);
 			else
 			{
-				ft_memcpy(dest, src, src_len - 1);
+				ft_memcpy(dest, src, size - 1);
 				dest[size - 1] = '\0';
 			}
 		}
