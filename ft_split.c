@@ -52,8 +52,8 @@ char	*ft_strndup(const char *s, size_t n)
 
 void	ft_skip_chars(const char *s, char c, size_t *i, size_t *j)
 {
-	while (s[*i] == c)
-		*i++;
+	while (s[*i++] == c)
+		;
 	*j = *i;
 }
 
