@@ -50,6 +50,13 @@ char	*ft_strndup(const char *s, size_t n)
 	return (str);
 }
 
+void	ft_skip_chars(const char *s, char c, size_t *i, size_t *j)
+{
+	while (s[*i] == c)
+		*i++;
+	*j = *i;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -60,21 +67,21 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	i = 0;
 	k = 0;
+	result = (char **)malloc(sizeof(char *) * (ft_word_count(s, c)) + 1);
 	if (s)
 	{
-		result = (char **)malloc(sizeof(char *) * (ft_word_count(s, c)) + 1);
-		while (s[i])
+		if (result)
 		{
-			while (s[i] == c)
-				i++;
-			j = i;
-			while (s[i] && s[i] != c)
-				i++;
-			if (i > j)
-				result[k++] = ft_strndup(s + j, i - j);
+			while (s[i])
+			{
+				ft_skip_chars(s, c, &i, &j);
+				while (s[i] && s[i] != c)
+					i++;
+				if (i > j)
+					result[k++] = ft_strndup(s + j, i - j);
+			}
+			result[k] = NULL;
 		}
-		result[k] = NULL;
-		return (result);
 	}
-	return (NULL);
+	return (result);
 }
