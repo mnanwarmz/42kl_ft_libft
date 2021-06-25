@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t nb);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
-int		ft_isdigit(char c);
+int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
@@ -46,7 +46,7 @@ int		ft_intlen(unsigned long n);
 void	ft_swap(int *a, int *b);
 char	*ft_strrev(char *str);
 int		ft_pow(int nb, int power);
-char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strcpy_bonus(char *dst, const char *src);
 
 void	ft_swapchar(char *a, char *b);
 typedef struct s_list

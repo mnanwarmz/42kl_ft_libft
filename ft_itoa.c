@@ -10,7 +10,7 @@ char	*ft_itoa(int n)
 	if (!(str))
 		return (NULL);
 	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
+		return (ft_strcpy_bonus(str, "-2147483648"));
 	if (n < 0)
 	{
 		str[0] = '-';

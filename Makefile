@@ -6,14 +6,11 @@ CFLAGS		=	-Wall -Wextra -Werror
 
 RM			=	rm -f
 
-AR			=	ar rc
-
-RL			=	ranlib
+AR			=	ar rcs
 
 SRC			=	ft_atoi.c			ft_bzero.c			ft_calloc.c		\
-				ft_isalnum.c		ft_isalpha.c		ft_intlen.c 	\
-				ft_isascii.c		ft_isdigit.c 		ft_pow.c		\
-				ft_isprint.c		ft_find.c			ft_isspace.c	\
+				ft_isalnum.c		ft_isalpha.c		ft_isascii.c 	\
+				ft_isdigit.c 		ft_isprint.c		ft_isspace.c 	\
 				ft_itoa.c			ft_memccpy.c		ft_memchr.c		\
 				ft_memcmp.c			ft_memcpy.c			ft_memmove.c	\
 				ft_memset.c			ft_putchar_fd.c		ft_putendl_fd.c	\
@@ -22,12 +19,15 @@ SRC			=	ft_atoi.c			ft_bzero.c			ft_calloc.c		\
 				ft_strlcat.c		ft_strlcpy.c		ft_strlen.c		\
 				ft_strmapi.c		ft_strncmp.c		ft_strnstr.c	\
 				ft_strrchr.c		ft_strtrim.c		ft_substr.c		\
-				ft_tolower.c		ft_toupper.c 		ft_strrev.c 	\
-				ft_swap.c 			ft_swapchar.c 		ft_strcpy.c
+				ft_tolower.c		ft_toupper.c
 
 B_SRC		=	ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c	\
 				ft_lstdelone.c		ft_lstiter.c		ft_lstlast.c	\
-				ft_lstmap.c			ft_lstnew.c			ft_lstsize.c
+				ft_lstmap.c			ft_lstnew.c			ft_lstsize.c 	\
+				ft_find_bonus.c 	ft_swap_bonus.c 	ft_intlen_bonus.c \
+				ft_strrev_bonus.c 	ft_strcpy_bonus.c 	ft_swapchar_bonus.c \
+				ft_pow_bonus.c
+
 
 OBJ			= 	$(SRC:.c=.o)
 
@@ -58,4 +58,4 @@ bonus		:	$(OBJ) $(B_OBJ)
 				@ $(AR) $(NAME) $(OBJ) $(B_OBJ)
 				@ $(RL) $(NAME)
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all clean fclean re bonus

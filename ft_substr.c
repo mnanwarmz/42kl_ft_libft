@@ -12,11 +12,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		s_len = ft_strlen(s);
 		if (start > s_len)
-			return ((char *)malloc(sizeof(char) * 1));
+			return (ft_strdup((char *)""));
 		if (len > s_len)
-			return ((char *)s);
+			return (ft_strdup((char *)s));
 		if (len > (s_len - start))
-			return ((char *)s);
+			len = s_len - start;
 		result = malloc(sizeof(char) * len + 1);
 		if (!result)
 			return (NULL);
@@ -25,5 +25,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		result[j] = '\0';
 		return (result);
 	}
-	return (0);
+	return (ft_strdup(""));
 }
