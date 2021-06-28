@@ -26,10 +26,6 @@ SRC			=	ft_atoi.c			ft_bzero.c			ft_calloc.c		\
 B_SRC		=	ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c	\
 				ft_lstdelone.c		ft_lstiter.c		ft_lstlast.c	\
 				ft_lstmap.c			ft_lstnew.c			ft_lstsize.c 	\
-				ft_find_bonus.c 	ft_swap_bonus.c 	ft_intlen_bonus.c \
-				ft_strrev_bonus.c 	ft_strcpy_bonus.c 	ft_swapchar_bonus.c \
-				ft_pow_bonus.c
-
 
 OBJ			= 	$(SRC:.c=.o)
 
