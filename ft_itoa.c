@@ -42,6 +42,8 @@ char	*ft_itoa(int n)
 		n *= -1;
 		str[0] = '-';
 	}
+	if (n == 0)
+		return (ft_strcpy(str, "0"));
 	while (len && n)
 	{
 		str[--len] = (n % 10) + '0';
