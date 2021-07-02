@@ -11,13 +11,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s)
 	{
 		s_len = ft_strlen(s);
-		if (start > s_len)
+		if (start >= s_len)
 			return (ft_strdup((char *)""));
 		if (len > s_len)
-			return (ft_strdup((char *)s));
+			len = s_len + 1 - start;
 		if (len > (s_len - start))
 			len = s_len - start;
-		result = malloc(sizeof(char) * len + 1);
+		result = malloc(sizeof(char) * (len + 1));
 		if (!result)
 			return (NULL);
 		while (s[start] && j < len)
@@ -25,5 +25,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		result[j] = '\0';
 		return (result);
 	}
-	return (ft_strdup(""));
+	return (NULL);
 }
