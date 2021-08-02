@@ -9,3 +9,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 	return ;
 }
+#include <stdio.h>
+int main()
+{
+	printf("Hello World")
+}
